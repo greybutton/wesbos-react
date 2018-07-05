@@ -1,6 +1,6 @@
 import React from "react";
 
-export default () => (
+export default props => (
   <header className="top">
     <h1>
       Catch
@@ -11,7 +11,7 @@ export default () => (
       day
     </h1>
     <h3 className="tagline">
-      <span>Fresh daily</span>
+      <span>{props.tagline}</span>
     </h3>
   </header>
 );
