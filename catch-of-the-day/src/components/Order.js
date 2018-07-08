@@ -20,7 +20,8 @@ const Order = props => {
         {orderIds.map(key => {
           const fish = props.fishes[key];
           const count = props.order[key];
-          const isAvailable = fish.status === "available";
+          const isAvailable = fish && fish.status === "available";
+          if (!fish) return null;
           if (isAvailable) {
             return (
               <li key={key}>
