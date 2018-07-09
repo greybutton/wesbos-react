@@ -27,6 +27,9 @@ const Order = props => {
               <li key={key}>
                 {count} lbs {fish.name}
                 {formatPrice(count * fish.price)}
+                <button onClick={() => props.removeFromOrder(key)}>
+                  &times;
+                </button>
               </li>
             );
           }
