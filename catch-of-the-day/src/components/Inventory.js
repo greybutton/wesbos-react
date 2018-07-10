@@ -58,7 +58,6 @@ class Inventory extends Component {
     if (!this.state.uid) {
       return <Login authenticate={this.authenticate} />;
     }
-    console.log(this.state);
     if (this.state.uid !== this.state.owner) {
       return (
         <div>
