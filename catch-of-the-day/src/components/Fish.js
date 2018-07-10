@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { formatPrice } from "../helpers";
 
 const Fish = props => {
@@ -19,6 +20,17 @@ const Fish = props => {
       </button>
     </li>
   );
+};
+
+Fish.propTypes = {
+  details: PropTypes.shape({
+    image: PropTypes.string,
+    name: PropTypes.string,
+    desc: PropTypes.string,
+    status: PropTypes.string,
+    price: PropTypes.number
+  }),
+  addToOrder: PropTypes.func
 };
 
 export default Fish;

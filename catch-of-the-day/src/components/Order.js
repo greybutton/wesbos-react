@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import { formatPrice } from "../helpers";
 
@@ -64,6 +65,12 @@ const Order = props => {
       </div>
     </div>
   );
+};
+
+Order.propTypes = {
+  fishes: PropTypes.object,
+  order: PropTypes.object,
+  removeFromOrder: PropTypes.func
 };
 
 export default Order;
